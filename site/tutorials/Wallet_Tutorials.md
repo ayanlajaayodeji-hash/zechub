@@ -4,50 +4,54 @@
 
 # Zcash Wallet Tutorials
 
-Below are a list of wallet tutorials that can help you get started with ZEC.
+Below are wallet tutorials that can help you get started with ZEC. Prefer a currently maintained wallet from the [Wallets](https://zechub.wiki/wallets) page.
 
+---
 
-- Zodl Wallet 
+- Vizor Wallet: An Introduction
 
-[![Video Thumbnail](/content-images/hqdefault-a4a2a5de7f.webp)](https://www.youtube.com/watch?v=G92zBIr-Wms)
+[![Video Thumbnail](https://img.youtube.com/vi/X3HB6qTPFXA/hqdefault.jpg)](https://www.youtube.com/watch?v=X3HB6qTPFXA)
 
-____
+Vizor is a self-custody Zcash wallet with a desktop-first interface built around shielded ZEC. The ZecHub tutorial covers installing from official sources, creating or importing a wallet, backing up the recovery phrase, and using features such as multiple accounts, Keystone hardware wallet support, and private coin voting.
 
+Official site: [vizor.cash](https://vizor.cash/)
 
-- Comparing Zcash Wallet
+---
 
-[![Video Thumbnail](/content-images/hqdefault-02389a1b67.webp)](https://www.youtube.com/watch?v=ao4ORC_VNcY)
+- Zodl Wallet
 
-____ 
+[![Video Thumbnail](https://img.youtube.com/vi/G92zBIr-Wms/hqdefault.jpg)](https://www.youtube.com/watch?v=G92zBIr-Wms)
+
+---
+
+- Comparing Zcash Wallets
+
+[![Video Thumbnail](https://img.youtube.com/vi/ao4ORC_VNcY/hqdefault.jpg)](https://www.youtube.com/watch?v=ao4ORC_VNcY)
+
+---
 
 > The three Ywallet videos below are kept for reference. Ywallet is no longer maintained and will not be updated for Ironwood, so it can no longer follow the chain. Pick a maintained wallet from the [Wallets](https://zechub.wiki/wallets) page.
 
 - Ywallet Cold Storage
 
-[![Video Thumbnail](/content-images/hqdefault-2811fac3b5.webp)](https://www.youtube.com/watch?v=hJaAccp-77k)
+[![Video Thumbnail](https://img.youtube.com/vi/hJaAccp-77k/hqdefault.jpg)](https://www.youtube.com/watch?v=hJaAccp-77k)
 
-____
+---
 
 - Ywallet Batch Backup
 
-[![Video Thumbnail](/content-images/hqdefault-a374a413ed.webp)](https://www.youtube.com/watch?v=0skM-RziBv8)
+[![Video Thumbnail](https://img.youtube.com/vi/0skM-RziBv8/hqdefault.jpg)](https://www.youtube.com/watch?v=0skM-RziBv8)
 
-
-____
+---
 
 - Ywallet Multipay Feature
 
-[![Video Thumbnail](/content-images/hqdefault-789c84a8e4.webp)](https://www.youtube.com/watch?v=ovlNktpxURI)
+[![Video Thumbnail](https://img.youtube.com/vi/ovlNktpxURI/hqdefault.jpg)](https://www.youtube.com/watch?v=ovlNktpxURI)
 
+---
 
-____
+- Unstoppable Wallet Tutorial
 
-- Unstoppable Wallet Tutorial 
+[![Video Thumbnail](https://img.youtube.com/vi/B9tpkgVRsq4/hqdefault.jpg)](https://www.youtube.com/watch?v=B9tpkgVRsq4)
 
-[![Video Thumbnail](/content-images/hqdefault-8ecdd85617.webp)](https://www.youtube.com/watch?v=B9tpkgVRsq4)
-
-____
-
-
-
-
+---
