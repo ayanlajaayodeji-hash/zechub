@@ -7,6 +7,8 @@
 - Today wallets download and scan far more data than they need, which is a major reason syncing is slow
 - PIR would let a wallet fetch only its own data privately, removing that bottleneck while keeping privacy intact
 - It is an active research area for Zcash, powerful in theory, and being made practical for real wallets
+- A live demonstration is already available: [ZecBlock Private](https://private.zecblock.com) is the first full PIR-based Zcash block explorer (transactions, blocks, and addresses)
+
 
 <br/>
 
@@ -15,6 +17,7 @@
 - Anyone who has wondered how a private wallet finds its own coins without leaking which ones
 - Newcomers who keep seeing PIR mentioned alongside Zcash scaling work
 - Readers who want the concept first and the cryptography underneath it second
+- Anyone curious about a working PIR-based block explorer
 
 <br/>
 
@@ -80,6 +83,60 @@ It is important to be honest about the stage. This is active research and engine
 
 <br/>
 
+## Live example: ZecBlock Private
+
+In November 2026 ZecBlock launched **ZecBlock Private** (private.zecblock.com), a version of its explorer that uses private information retrieval for transaction, block, and address lookups.
+
+This is the first full Zcash block explorer (covering transactions, blocks, and addresses) built on PIR. Earlier PIR explorer demos were limited to narrower queries such as address balances.
+
+<br/>
+
+## How private lookups work
+
+- The query (transaction ID, block height/hash, or address) is encrypted entirely in the browser before it is sent.
+- The server processes the entire published dataset without learning which record was requested.
+- The server returns a single encrypted response that only the browser can decrypt.
+- A search for something that exists is indistinguishable from a search for something that does not (same request size and shape).
+
+After each search the site shows a short summary of exactly what was sent, making the privacy property easy to inspect.
+
+<br/>
+
+## Verification steps
+
+Each data publication is signed. The browser verifies the signature on every result before displaying it, so a malicious or buggy server cannot substitute different data.
+
+<br/>
+
+## Data freshness
+
+New blocks are published every few seconds. Data on the private explorer is typically within about 20 seconds of the regular ZecBlock explorer.
+
+<br/>
+
+## Bandwidth costs
+
+PIR is more expensive than a normal lookup because the server must touch the whole dataset:
+
+- Transaction lookup: roughly 1.2 MB uploaded
+- Address lookup: roughly 0.4 MB uploaded
+
+This is the practical cost of the server learning nothing about the query.
+
+<br/>
+
+## Client implementation
+
+The browser client is a Rust → WebAssembly wrapper (currently in the ZecBlock repository under `prototype/pir-browser`). It is built on top of open-source PIR libraries from the Valar Group. The wrapper is not yet published as a standalone npm package, but that is planned.
+
+<br/>
+
+## Distinction from wallet PIR
+
+ZecBlock Private demonstrates PIR for **public** chain data (looking up a known transaction, block, or address without revealing which one). It does **not** solve the harder wallet problem of privately discovering which notes belong to a viewing key or privately checking nullifiers for unspent notes. Those remain active research areas.
+
+<br/>
+
 ## Common misconceptions
 
 - PIR hides which item you requested, it does not necessarily hide that you contacted the server at all, network-level metadata is a separate concern
@@ -95,3 +152,5 @@ It is important to be honest about the stage. This is active research and engine
 - [Lightwallet Nodes](https://zechub.wiki/zcash-tech/lightwallet-nodes) - the light client model PIR would improve
 - [zk-SNARKs](https://zechub.wiki/zcash-tech/zk-snarks) - the other major cryptographic tool behind Zcash privacy
 - [Post-Quantum Security](https://zechub.wiki/zcash-tech/post-quantum-security) - why lattice-based methods matter for the future
+- [ZecBlock](https://zecblock.com) - the main public explorer
+- [Valar Group](https://zechub.wiki/zcash-organizations/valar-group) - developers of the PIR libraries used by both the explorer prototype and wallet research
